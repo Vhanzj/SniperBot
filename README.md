@@ -1,18 +1,15 @@
-name: AI Code Review with xAI
+# SniperBot
+Bitsmaid Sniper Minting Bot
 
-on:
-  pull_request:
-    types: [opened, synchronize]
+Preview mint sniper. Paste an OpenSea link or contract, pick a stage, and arm the watch.
 
-permissions:
-  pull-requests: write
+Demo only: no private keys, no broadcast, no real mint.
 
-jobs:
-  review:
-    name: Review
-    runs-on: ubuntu-latest
-    steps:
-      - name: Code Review
-        uses: tarmojussila/xai-code-review@v0.1.1
-        with:
-          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+## Run
+
+Needs Node 22.
+
+```
+npm install
+npm run dev
+```
